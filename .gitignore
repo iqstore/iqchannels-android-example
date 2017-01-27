@@ -1,0 +1,32 @@
+# Project
+/coverage.out
+/build
+build.tar.gz
+build.zip
+/clusters/local/var
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+.idea/
+*.ipr
+*.iws
+*.iml
+out/
+
+
+# Android
+*.iml
+.gradle
+/gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
