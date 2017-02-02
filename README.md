@@ -128,7 +128,37 @@ public class MainActivity extends AppCompatActivity
 
 Отображение непрочитанных сообщений
 -----------------------------------
-Будет доступно в понедельник 30.01.2017.
+Для отображения и обновления непрочитанных сообщений нужно добавить слушателя в IQChannels.
+Слушателя можно добавлять в любой момент времени, он корректно обрабатывает переподключения,
+логин, логаут.
+
+Пример добавления слушателя в `Activity.onCreate`:
+```java
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener,
+                   UnreadListener {
+
+    private Cancellable unreadSubscription;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        listenToUnread();
+    }
+
+    // Добавляем слушателя непрочитанных сообщений.
+    private void listenToUnread() {
+        unreadSubscription = IQChannels.instance().addUnreadListener(this);
+    }
+
+    // Показывает текущие количество непрочитанных сообщений.
+    @Override
+    public void unreadChanged(int unread) {
+
+    }
+}
+```
 
 
 Отправка пуш-токенов
