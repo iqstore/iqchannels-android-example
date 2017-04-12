@@ -159,8 +159,3 @@ public class MainActivity extends AppCompatActivity
     }
 }
 ```
-
-
-Отправка пуш-токенов
---------------------
-Будет доступна в понедельник 30.01.2017.
