@@ -24,11 +24,11 @@ allprojects {
 }
 ```
 
-Добавить зависимосить `compile 'ru.iqstore:iqchannels-sdk:1.0.0'` в `build.gradle` модуля приложнеия.
+Добавить зависимосить `compile 'ru.iqstore:iqchannels-sdk:1.1.0'` в `build.gradle` модуля приложнеия.
 ```build.gradle
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])   
-    compile 'ru.iqstore:iqchannels-sdk:1.0.0'
+    compile 'ru.iqstore:iqchannels-sdk:1.1.0'
     // etc...
 }
 ```
@@ -66,8 +66,9 @@ public class MainActivity extends AppCompatActivity
 ```
 
 
-Логин
------
+Логин (опционально)
+-------------------
+Если на сервере настроено подключение к CRM или ДБО, тогда можно авторизовать клиента в этих системах.
 Логин/логаут пользователя осуществляется по внешнему токену, специфичному для конкретного приложения.
 Для логина требуется вызвать в любом месте приложения:
 
@@ -159,4 +160,3 @@ public class MainActivity extends AppCompatActivity
     }
 }
 ```
-
